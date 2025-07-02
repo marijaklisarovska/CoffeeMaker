@@ -59,10 +59,12 @@ namespace CoffeeMaker
 
         }
 
-        private void btnMakeCoffee_Click(object sender, EventArgs e)
+        private decimal GetTotalPrice()
         {
             CoffeeOption selectedCoffee = null;
+            int sugarCount = 0;
 
+            // Get selected coffee
             if (rbEspresso.Checked)
                 selectedCoffee = (CoffeeOption)rbEspresso.Tag;
             else if (rbAmericano.Checked)
@@ -77,6 +79,59 @@ namespace CoffeeMaker
                 selectedCoffee = (CoffeeOption)rbMocha.Tag;
 
             if (selectedCoffee == null)
+                return 0m;
+
+            // Count sugar checkboxes for selected coffee
+
+            decimal totalPrice =selectedCoffee.CoffeePrice;
+
+            if (rbEspresso.Checked && cbSugarEspresso.Checked)
+            {
+                if (rbEspresso1.Checked) totalPrice += 0.20m;
+                if (rbEspresso2.Checked) totalPrice += 2 * 0.20m;
+                if (rbEspresso3.Checked) totalPrice += 3 * 0.20m;
+            }
+            else if (rbAmericano.Checked && cbSugarAmericano.Checked)
+            {
+                if (rbAmericano1.Checked) totalPrice += 0.20m;
+                if (rbAmericano2.Checked) totalPrice += 2 * 0.20m;
+                if (rbAmericano3.Checked) totalPrice += 3 * 0.20m;
+            }
+            else if (rbMacchiato.Checked && cbSugarMacchiato.Checked)
+            {
+                if (rbMacchiato1.Checked) totalPrice += 0.20m;
+                if (rbMacchiato2.Checked) totalPrice += 2 * 0.20m;
+                if (rbMacchiato3.Checked) totalPrice += 3 * 0.20m;
+            }
+            else if (rbCappuccino.Checked && cbSugarCappuccino.Checked)
+            {
+                if (rbCappuccino1.Checked) totalPrice += 0.20m;
+                if (rbCappuccino2.Checked) totalPrice += 2 * 0.20m;
+                if (rbCappuccino3.Checked) totalPrice += 3 * 0.20m;
+            }
+            else if (rbLatte.Checked && cbSugarLatte.Checked)
+            {
+                if (rbLatte1.Checked) totalPrice += 0.20m;
+                if (rbLatte2.Checked) totalPrice += 2 * 0.20m;
+                if (rbLatte3.Checked) totalPrice += 3 * 0.20m;
+            }
+            else if (rbMocha.Checked && cbSugarMocha.Checked)
+            {
+                if (rbMocha1.Checked) totalPrice += 0.20m;
+                if (rbMocha2.Checked) totalPrice += 2 * 0.20m;
+                if (rbMocha3.Checked) totalPrice += 3 * 0.20m;
+            }
+
+            decimal sugarPricePerUnit = 0.20m;
+
+            return totalPrice;
+        }
+
+        private void btnMakeCoffee_Click(object sender, EventArgs e)
+        {
+            decimal totalPrice = GetTotalPrice();
+
+            if (totalPrice == 0m)
             {
                 MessageBox.Show("Please select a coffee.");
                 return;
@@ -90,22 +145,20 @@ namespace CoffeeMaker
                 {
                     decimal insertedMoney = moneyForm.InsertedMoney;
 
-                    if (insertedMoney < selectedCoffee.CoffeePrice)
+                    if (insertedMoney < totalPrice)
                     {
-                        MessageBox.Show("Not enough money. Please insert more.");
-                        return; 
+                        MessageBox.Show($"Not enough money. Please insert at least ${totalPrice:F2}.");
+                        return;
                     }
 
-                    decimal change = insertedMoney - selectedCoffee.CoffeePrice;
+                    decimal change = insertedMoney - totalPrice;
 
                     MessageBox.Show($"Thank you! Change: ${change:F2}");
 
                     var progress = new FormBillAndProgress(); //todo
                     progress.Show();
-
                 }
             }
-
         }
 
         private void HideAllSugarControls()
