@@ -9,7 +9,7 @@ bin/
 obj/
 
 # Visual Studio cache
-.vs/
+.vs
 
 # Other
 *.log
@@ -28,3 +28,5 @@ obj/
 # Rider or VSCode metadata (if anyone uses those)
 .idea/
 .vscode/
+/.vs/
+/CoffeeMaker/bin/
