@@ -1,0 +1,12 @@
+C:\Users\marij\source\repos\CoffeeMaker\CoffeeMaker\bin\Debug\CoffeeMaker.exe.config
+C:\Users\marij\source\repos\CoffeeMaker\CoffeeMaker\bin\Debug\CoffeeMaker.exe
+C:\Users\marij\source\repos\CoffeeMaker\CoffeeMaker\bin\Debug\CoffeeMaker.pdb
+C:\Users\marij\source\repos\CoffeeMaker\CoffeeMaker\obj\Debug\CoffeeMaker.csproj.AssemblyReference.cache
+C:\Users\marij\source\repos\CoffeeMaker\CoffeeMaker\obj\Debug\CoffeeMaker.Form1.resources
+C:\Users\marij\source\repos\CoffeeMaker\CoffeeMaker\obj\Debug\CoffeeMaker.Properties.Resources.resources
+C:\Users\marij\source\repos\CoffeeMaker\CoffeeMaker\obj\Debug\CoffeeMaker.csproj.GenerateResource.cache
+C:\Users\marij\source\repos\CoffeeMaker\CoffeeMaker\obj\Debug\CoffeeMaker.csproj.CoreCompileInputs.cache
+C:\Users\marij\source\repos\CoffeeMaker\CoffeeMaker\obj\Debug\CoffeeMaker.exe
+C:\Users\marij\source\repos\CoffeeMaker\CoffeeMaker\obj\Debug\CoffeeMaker.pdb
+C:\Users\marij\source\repos\CoffeeMaker\CoffeeMaker\obj\Debug\CoffeeMaker.InsertMoneyForm.resources
+C:\Users\marij\source\repos\CoffeeMaker\CoffeeMaker\obj\Debug\CoffeeMaker.FormBillAndProgress.resources
