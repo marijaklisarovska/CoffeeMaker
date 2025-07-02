@@ -28,14 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormBillAndProgress));
             this.SuspendLayout();
             // 
             // FormBillAndProgress
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImage = global::CoffeeMaker.Properties.Resources.beige_background;
             this.ClientSize = new System.Drawing.Size(670, 563);
             this.Name = "FormBillAndProgress";
             this.Text = "FormBillAndProgress";

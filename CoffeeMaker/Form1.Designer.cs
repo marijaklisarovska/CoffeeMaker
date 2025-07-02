@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.pbEspresso = new System.Windows.Forms.PictureBox();
             this.pbAmericano = new System.Windows.Forms.PictureBox();
             this.pbMacchiato = new System.Windows.Forms.PictureBox();
@@ -41,33 +40,57 @@
             this.rbMacchiato = new System.Windows.Forms.RadioButton();
             this.rbMocha = new System.Windows.Forms.RadioButton();
             this.rbLatte = new System.Windows.Forms.RadioButton();
-            this.cbSugar = new System.Windows.Forms.CheckBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
-            this.checkBox5 = new System.Windows.Forms.CheckBox();
-            this.checkBox6 = new System.Windows.Forms.CheckBox();
-            this.checkBox7 = new System.Windows.Forms.CheckBox();
-            this.checkBox8 = new System.Windows.Forms.CheckBox();
-            this.checkBox9 = new System.Windows.Forms.CheckBox();
-            this.checkBox10 = new System.Windows.Forms.CheckBox();
+            this.cbSugarEspresso = new System.Windows.Forms.CheckBox();
+            this.cbSugarMocha = new System.Windows.Forms.CheckBox();
+            this.cbSugarCappuccino = new System.Windows.Forms.CheckBox();
+            this.cbSugarAmericano = new System.Windows.Forms.CheckBox();
+            this.cbSugarLatte = new System.Windows.Forms.CheckBox();
+            this.cbSugarMacchiato = new System.Windows.Forms.CheckBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnMakeCoffee = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.cbMilk = new System.Windows.Forms.CheckBox();
+            this.rbEspresso1 = new System.Windows.Forms.RadioButton();
+            this.rbEspresso2 = new System.Windows.Forms.RadioButton();
+            this.rbEspresso3 = new System.Windows.Forms.RadioButton();
+            this.rbMacchiato1 = new System.Windows.Forms.RadioButton();
+            this.rbMacchiato2 = new System.Windows.Forms.RadioButton();
+            this.rbMacchiato3 = new System.Windows.Forms.RadioButton();
+            this.rbLatte1 = new System.Windows.Forms.RadioButton();
+            this.rbLatte2 = new System.Windows.Forms.RadioButton();
+            this.rbLatte3 = new System.Windows.Forms.RadioButton();
+            this.rbMocha3 = new System.Windows.Forms.RadioButton();
+            this.rbCappuccino3 = new System.Windows.Forms.RadioButton();
+            this.rbAmericano3 = new System.Windows.Forms.RadioButton();
+            this.rbMocha1 = new System.Windows.Forms.RadioButton();
+            this.rbCappuccino1 = new System.Windows.Forms.RadioButton();
+            this.rbAmericano1 = new System.Windows.Forms.RadioButton();
+            this.rbMocha2 = new System.Windows.Forms.RadioButton();
+            this.rbCappuccino2 = new System.Windows.Forms.RadioButton();
+            this.rbAmericano2 = new System.Windows.Forms.RadioButton();
+            this.panelSugarEspresso = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pbEspresso)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbAmericano)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbMacchiato)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbCappuccino)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLatte)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbMocha)).BeginInit();
+            this.panelSugarEspresso.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // pbEspresso
             // 
             this.pbEspresso.BackColor = System.Drawing.Color.Transparent;
-            this.pbEspresso.Image = ((System.Drawing.Image)(resources.GetObject("pbEspresso.Image")));
+            this.pbEspresso.Image = global::CoffeeMaker.Properties.Resources.espresso;
             this.pbEspresso.Location = new System.Drawing.Point(12, 64);
             this.pbEspresso.Name = "pbEspresso";
             this.pbEspresso.Size = new System.Drawing.Size(190, 133);
@@ -78,7 +101,7 @@
             // pbAmericano
             // 
             this.pbAmericano.BackColor = System.Drawing.Color.Transparent;
-            this.pbAmericano.Image = ((System.Drawing.Image)(resources.GetObject("pbAmericano.Image")));
+            this.pbAmericano.Image = global::CoffeeMaker.Properties.Resources.americano;
             this.pbAmericano.Location = new System.Drawing.Point(12, 283);
             this.pbAmericano.Name = "pbAmericano";
             this.pbAmericano.Size = new System.Drawing.Size(190, 133);
@@ -89,7 +112,7 @@
             // pbMacchiato
             // 
             this.pbMacchiato.BackColor = System.Drawing.Color.Transparent;
-            this.pbMacchiato.Image = ((System.Drawing.Image)(resources.GetObject("pbMacchiato.Image")));
+            this.pbMacchiato.Image = global::CoffeeMaker.Properties.Resources.macchiato;
             this.pbMacchiato.Location = new System.Drawing.Point(228, 64);
             this.pbMacchiato.Name = "pbMacchiato";
             this.pbMacchiato.Size = new System.Drawing.Size(190, 133);
@@ -100,7 +123,7 @@
             // pbCappuccino
             // 
             this.pbCappuccino.BackColor = System.Drawing.Color.Transparent;
-            this.pbCappuccino.Image = ((System.Drawing.Image)(resources.GetObject("pbCappuccino.Image")));
+            this.pbCappuccino.Image = global::CoffeeMaker.Properties.Resources.cappuccino;
             this.pbCappuccino.Location = new System.Drawing.Point(228, 283);
             this.pbCappuccino.Name = "pbCappuccino";
             this.pbCappuccino.Size = new System.Drawing.Size(190, 133);
@@ -111,7 +134,7 @@
             // pbLatte
             // 
             this.pbLatte.BackColor = System.Drawing.Color.Transparent;
-            this.pbLatte.Image = ((System.Drawing.Image)(resources.GetObject("pbLatte.Image")));
+            this.pbLatte.Image = global::CoffeeMaker.Properties.Resources.latte;
             this.pbLatte.Location = new System.Drawing.Point(454, 64);
             this.pbLatte.Name = "pbLatte";
             this.pbLatte.Size = new System.Drawing.Size(190, 133);
@@ -122,7 +145,7 @@
             // pbMocha
             // 
             this.pbMocha.BackColor = System.Drawing.Color.Transparent;
-            this.pbMocha.Image = ((System.Drawing.Image)(resources.GetObject("pbMocha.Image")));
+            this.pbMocha.Image = global::CoffeeMaker.Properties.Resources.mocha;
             this.pbMocha.Location = new System.Drawing.Point(455, 283);
             this.pbMocha.Name = "pbMocha";
             this.pbMocha.Size = new System.Drawing.Size(190, 133);
@@ -203,126 +226,77 @@
             this.rbLatte.Text = "Latte";
             this.rbLatte.UseVisualStyleBackColor = false;
             // 
-            // cbSugar
+            // cbSugarEspresso
             // 
-            this.cbSugar.AutoSize = true;
-            this.cbSugar.BackColor = System.Drawing.Color.Transparent;
-            this.cbSugar.Location = new System.Drawing.Point(12, 226);
-            this.cbSugar.Name = "cbSugar";
-            this.cbSugar.Size = new System.Drawing.Size(54, 17);
-            this.cbSugar.TabIndex = 12;
-            this.cbSugar.Text = "Sugar";
-            this.cbSugar.UseVisualStyleBackColor = false;
+            this.cbSugarEspresso.AutoSize = true;
+            this.cbSugarEspresso.BackColor = System.Drawing.Color.Transparent;
+            this.cbSugarEspresso.Location = new System.Drawing.Point(12, 226);
+            this.cbSugarEspresso.Name = "cbSugarEspresso";
+            this.cbSugarEspresso.Size = new System.Drawing.Size(54, 17);
+            this.cbSugarEspresso.TabIndex = 12;
+            this.cbSugarEspresso.Text = "Sugar";
+            this.cbSugarEspresso.UseVisualStyleBackColor = false;
+            this.cbSugarEspresso.CheckedChanged += new System.EventHandler(this.cbSugarEspresso_CheckedChanged);
             // 
-            // checkBox1
+            // cbSugarMocha
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.BackColor = System.Drawing.Color.Transparent;
-            this.checkBox1.Location = new System.Drawing.Point(454, 445);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(54, 17);
-            this.checkBox1.TabIndex = 14;
-            this.checkBox1.Text = "Sugar";
-            this.checkBox1.UseVisualStyleBackColor = false;
+            this.cbSugarMocha.AutoSize = true;
+            this.cbSugarMocha.BackColor = System.Drawing.Color.Transparent;
+            this.cbSugarMocha.Location = new System.Drawing.Point(454, 445);
+            this.cbSugarMocha.Name = "cbSugarMocha";
+            this.cbSugarMocha.Size = new System.Drawing.Size(54, 17);
+            this.cbSugarMocha.TabIndex = 14;
+            this.cbSugarMocha.Text = "Sugar";
+            this.cbSugarMocha.UseVisualStyleBackColor = false;
+            this.cbSugarMocha.CheckedChanged += new System.EventHandler(this.cbSugarMocha_CheckedChanged);
             // 
-            // checkBox2
+            // cbSugarCappuccino
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.BackColor = System.Drawing.Color.Transparent;
-            this.checkBox2.Location = new System.Drawing.Point(228, 445);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(54, 17);
-            this.checkBox2.TabIndex = 15;
-            this.checkBox2.Text = "Sugar";
-            this.checkBox2.UseVisualStyleBackColor = false;
+            this.cbSugarCappuccino.AutoSize = true;
+            this.cbSugarCappuccino.BackColor = System.Drawing.Color.Transparent;
+            this.cbSugarCappuccino.Location = new System.Drawing.Point(228, 445);
+            this.cbSugarCappuccino.Name = "cbSugarCappuccino";
+            this.cbSugarCappuccino.Size = new System.Drawing.Size(54, 17);
+            this.cbSugarCappuccino.TabIndex = 15;
+            this.cbSugarCappuccino.Text = "Sugar";
+            this.cbSugarCappuccino.UseVisualStyleBackColor = false;
+            this.cbSugarCappuccino.CheckedChanged += new System.EventHandler(this.cbSugarCappuccino_CheckedChanged);
             // 
-            // checkBox3
+            // cbSugarAmericano
             // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.BackColor = System.Drawing.Color.Transparent;
-            this.checkBox3.Location = new System.Drawing.Point(12, 445);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(54, 17);
-            this.checkBox3.TabIndex = 16;
-            this.checkBox3.Text = "Sugar";
-            this.checkBox3.UseVisualStyleBackColor = false;
+            this.cbSugarAmericano.AutoSize = true;
+            this.cbSugarAmericano.BackColor = System.Drawing.Color.Transparent;
+            this.cbSugarAmericano.Location = new System.Drawing.Point(12, 445);
+            this.cbSugarAmericano.Name = "cbSugarAmericano";
+            this.cbSugarAmericano.Size = new System.Drawing.Size(54, 17);
+            this.cbSugarAmericano.TabIndex = 16;
+            this.cbSugarAmericano.Text = "Sugar";
+            this.cbSugarAmericano.UseVisualStyleBackColor = false;
+            this.cbSugarAmericano.CheckedChanged += new System.EventHandler(this.cbSugarAmericano_CheckedChanged);
             // 
-            // checkBox4
+            // cbSugarLatte
             // 
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.BackColor = System.Drawing.Color.Transparent;
-            this.checkBox4.Location = new System.Drawing.Point(455, 226);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(54, 17);
-            this.checkBox4.TabIndex = 17;
-            this.checkBox4.Text = "Sugar";
-            this.checkBox4.UseVisualStyleBackColor = false;
+            this.cbSugarLatte.AutoSize = true;
+            this.cbSugarLatte.BackColor = System.Drawing.Color.Transparent;
+            this.cbSugarLatte.Location = new System.Drawing.Point(455, 226);
+            this.cbSugarLatte.Name = "cbSugarLatte";
+            this.cbSugarLatte.Size = new System.Drawing.Size(54, 17);
+            this.cbSugarLatte.TabIndex = 17;
+            this.cbSugarLatte.Text = "Sugar";
+            this.cbSugarLatte.UseVisualStyleBackColor = false;
+            this.cbSugarLatte.CheckedChanged += new System.EventHandler(this.cbSugarLatte_CheckedChanged);
             // 
-            // checkBox5
+            // cbSugarMacchiato
             // 
-            this.checkBox5.AutoSize = true;
-            this.checkBox5.BackColor = System.Drawing.Color.Transparent;
-            this.checkBox5.Location = new System.Drawing.Point(228, 226);
-            this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Size = new System.Drawing.Size(54, 17);
-            this.checkBox5.TabIndex = 18;
-            this.checkBox5.Text = "Sugar";
-            this.checkBox5.UseVisualStyleBackColor = false;
-            // 
-            // checkBox6
-            // 
-            this.checkBox6.AutoSize = true;
-            this.checkBox6.BackColor = System.Drawing.Color.Transparent;
-            this.checkBox6.Location = new System.Drawing.Point(83, 445);
-            this.checkBox6.Name = "checkBox6";
-            this.checkBox6.Size = new System.Drawing.Size(45, 17);
-            this.checkBox6.TabIndex = 19;
-            this.checkBox6.Text = "Milk";
-            this.checkBox6.UseVisualStyleBackColor = false;
-            // 
-            // checkBox7
-            // 
-            this.checkBox7.AutoSize = true;
-            this.checkBox7.BackColor = System.Drawing.Color.Transparent;
-            this.checkBox7.Location = new System.Drawing.Point(524, 445);
-            this.checkBox7.Name = "checkBox7";
-            this.checkBox7.Size = new System.Drawing.Size(45, 17);
-            this.checkBox7.TabIndex = 20;
-            this.checkBox7.Text = "Milk";
-            this.checkBox7.UseVisualStyleBackColor = false;
-            // 
-            // checkBox8
-            // 
-            this.checkBox8.AutoSize = true;
-            this.checkBox8.BackColor = System.Drawing.Color.Transparent;
-            this.checkBox8.Location = new System.Drawing.Point(305, 445);
-            this.checkBox8.Name = "checkBox8";
-            this.checkBox8.Size = new System.Drawing.Size(45, 17);
-            this.checkBox8.TabIndex = 21;
-            this.checkBox8.Text = "Milk";
-            this.checkBox8.UseVisualStyleBackColor = false;
-            // 
-            // checkBox9
-            // 
-            this.checkBox9.AutoSize = true;
-            this.checkBox9.BackColor = System.Drawing.Color.Transparent;
-            this.checkBox9.Location = new System.Drawing.Point(524, 226);
-            this.checkBox9.Name = "checkBox9";
-            this.checkBox9.Size = new System.Drawing.Size(45, 17);
-            this.checkBox9.TabIndex = 22;
-            this.checkBox9.Text = "Milk";
-            this.checkBox9.UseVisualStyleBackColor = false;
-            // 
-            // checkBox10
-            // 
-            this.checkBox10.AutoSize = true;
-            this.checkBox10.BackColor = System.Drawing.Color.Transparent;
-            this.checkBox10.Location = new System.Drawing.Point(305, 226);
-            this.checkBox10.Name = "checkBox10";
-            this.checkBox10.Size = new System.Drawing.Size(45, 17);
-            this.checkBox10.TabIndex = 23;
-            this.checkBox10.Text = "Milk";
-            this.checkBox10.UseVisualStyleBackColor = false;
+            this.cbSugarMacchiato.AutoSize = true;
+            this.cbSugarMacchiato.BackColor = System.Drawing.Color.Transparent;
+            this.cbSugarMacchiato.Location = new System.Drawing.Point(228, 226);
+            this.cbSugarMacchiato.Name = "cbSugarMacchiato";
+            this.cbSugarMacchiato.Size = new System.Drawing.Size(54, 17);
+            this.cbSugarMacchiato.TabIndex = 18;
+            this.cbSugarMacchiato.Text = "Sugar";
+            this.cbSugarMacchiato.UseVisualStyleBackColor = false;
+            this.cbSugarMacchiato.CheckedChanged += new System.EventHandler(this.cbSugarMacchiato_CheckedChanged);
             // 
             // label1
             // 
@@ -364,38 +338,309 @@
             this.button1.Text = "Make Coffee";
             this.button1.UseVisualStyleBackColor = false;
             // 
-            // cbMilk
+            // rbEspresso1
             // 
-            this.cbMilk.AutoSize = true;
-            this.cbMilk.BackColor = System.Drawing.Color.Transparent;
-            this.cbMilk.Location = new System.Drawing.Point(83, 226);
-            this.cbMilk.Name = "cbMilk";
-            this.cbMilk.Size = new System.Drawing.Size(45, 17);
-            this.cbMilk.TabIndex = 13;
-            this.cbMilk.Text = "Milk";
-            this.cbMilk.UseVisualStyleBackColor = false;
+            this.rbEspresso1.AutoSize = true;
+            this.rbEspresso1.BackColor = System.Drawing.Color.Transparent;
+            this.rbEspresso1.Location = new System.Drawing.Point(3, -1);
+            this.rbEspresso1.Name = "rbEspresso1";
+            this.rbEspresso1.Size = new System.Drawing.Size(31, 17);
+            this.rbEspresso1.TabIndex = 27;
+            this.rbEspresso1.TabStop = true;
+            this.rbEspresso1.Text = "1";
+            this.rbEspresso1.UseVisualStyleBackColor = false;
+            // 
+            // rbEspresso2
+            // 
+            this.rbEspresso2.AutoSize = true;
+            this.rbEspresso2.BackColor = System.Drawing.Color.Transparent;
+            this.rbEspresso2.Location = new System.Drawing.Point(37, -1);
+            this.rbEspresso2.Name = "rbEspresso2";
+            this.rbEspresso2.Size = new System.Drawing.Size(31, 17);
+            this.rbEspresso2.TabIndex = 28;
+            this.rbEspresso2.TabStop = true;
+            this.rbEspresso2.Text = "2";
+            this.rbEspresso2.UseVisualStyleBackColor = false;
+            // 
+            // rbEspresso3
+            // 
+            this.rbEspresso3.AutoSize = true;
+            this.rbEspresso3.BackColor = System.Drawing.Color.Transparent;
+            this.rbEspresso3.Location = new System.Drawing.Point(77, 0);
+            this.rbEspresso3.Name = "rbEspresso3";
+            this.rbEspresso3.Size = new System.Drawing.Size(31, 17);
+            this.rbEspresso3.TabIndex = 29;
+            this.rbEspresso3.TabStop = true;
+            this.rbEspresso3.Text = "3";
+            this.rbEspresso3.UseVisualStyleBackColor = false;
+            // 
+            // rbMacchiato1
+            // 
+            this.rbMacchiato1.AutoSize = true;
+            this.rbMacchiato1.BackColor = System.Drawing.Color.Transparent;
+            this.rbMacchiato1.Location = new System.Drawing.Point(3, 0);
+            this.rbMacchiato1.Name = "rbMacchiato1";
+            this.rbMacchiato1.Size = new System.Drawing.Size(31, 17);
+            this.rbMacchiato1.TabIndex = 30;
+            this.rbMacchiato1.TabStop = true;
+            this.rbMacchiato1.Text = "1";
+            this.rbMacchiato1.UseVisualStyleBackColor = false;
+            // 
+            // rbMacchiato2
+            // 
+            this.rbMacchiato2.AutoSize = true;
+            this.rbMacchiato2.BackColor = System.Drawing.Color.Transparent;
+            this.rbMacchiato2.Location = new System.Drawing.Point(40, 0);
+            this.rbMacchiato2.Name = "rbMacchiato2";
+            this.rbMacchiato2.Size = new System.Drawing.Size(31, 17);
+            this.rbMacchiato2.TabIndex = 31;
+            this.rbMacchiato2.TabStop = true;
+            this.rbMacchiato2.Text = "2";
+            this.rbMacchiato2.UseVisualStyleBackColor = false;
+            // 
+            // rbMacchiato3
+            // 
+            this.rbMacchiato3.AutoSize = true;
+            this.rbMacchiato3.BackColor = System.Drawing.Color.Transparent;
+            this.rbMacchiato3.Location = new System.Drawing.Point(77, 0);
+            this.rbMacchiato3.Name = "rbMacchiato3";
+            this.rbMacchiato3.Size = new System.Drawing.Size(31, 17);
+            this.rbMacchiato3.TabIndex = 32;
+            this.rbMacchiato3.TabStop = true;
+            this.rbMacchiato3.Text = "3";
+            this.rbMacchiato3.UseVisualStyleBackColor = false;
+            // 
+            // rbLatte1
+            // 
+            this.rbLatte1.AutoSize = true;
+            this.rbLatte1.BackColor = System.Drawing.Color.Transparent;
+            this.rbLatte1.Location = new System.Drawing.Point(11, -1);
+            this.rbLatte1.Name = "rbLatte1";
+            this.rbLatte1.Size = new System.Drawing.Size(31, 17);
+            this.rbLatte1.TabIndex = 33;
+            this.rbLatte1.TabStop = true;
+            this.rbLatte1.Text = "1";
+            this.rbLatte1.UseVisualStyleBackColor = false;
+            // 
+            // rbLatte2
+            // 
+            this.rbLatte2.AutoSize = true;
+            this.rbLatte2.BackColor = System.Drawing.Color.Transparent;
+            this.rbLatte2.Location = new System.Drawing.Point(48, 0);
+            this.rbLatte2.Name = "rbLatte2";
+            this.rbLatte2.Size = new System.Drawing.Size(31, 17);
+            this.rbLatte2.TabIndex = 34;
+            this.rbLatte2.TabStop = true;
+            this.rbLatte2.Text = "2";
+            this.rbLatte2.UseVisualStyleBackColor = false;
+            // 
+            // rbLatte3
+            // 
+            this.rbLatte3.AutoSize = true;
+            this.rbLatte3.BackColor = System.Drawing.Color.Transparent;
+            this.rbLatte3.Location = new System.Drawing.Point(85, -1);
+            this.rbLatte3.Name = "rbLatte3";
+            this.rbLatte3.Size = new System.Drawing.Size(31, 17);
+            this.rbLatte3.TabIndex = 35;
+            this.rbLatte3.TabStop = true;
+            this.rbLatte3.Text = "3";
+            this.rbLatte3.UseVisualStyleBackColor = false;
+            // 
+            // rbMocha3
+            // 
+            this.rbMocha3.AutoSize = true;
+            this.rbMocha3.BackColor = System.Drawing.Color.Transparent;
+            this.rbMocha3.Location = new System.Drawing.Point(78, 0);
+            this.rbMocha3.Name = "rbMocha3";
+            this.rbMocha3.Size = new System.Drawing.Size(31, 17);
+            this.rbMocha3.TabIndex = 36;
+            this.rbMocha3.TabStop = true;
+            this.rbMocha3.Text = "3";
+            this.rbMocha3.UseVisualStyleBackColor = false;
+            // 
+            // rbCappuccino3
+            // 
+            this.rbCappuccino3.AutoSize = true;
+            this.rbCappuccino3.BackColor = System.Drawing.Color.Transparent;
+            this.rbCappuccino3.Location = new System.Drawing.Point(77, 3);
+            this.rbCappuccino3.Name = "rbCappuccino3";
+            this.rbCappuccino3.Size = new System.Drawing.Size(31, 17);
+            this.rbCappuccino3.TabIndex = 37;
+            this.rbCappuccino3.TabStop = true;
+            this.rbCappuccino3.Text = "3";
+            this.rbCappuccino3.UseVisualStyleBackColor = false;
+            // 
+            // rbAmericano3
+            // 
+            this.rbAmericano3.AutoSize = true;
+            this.rbAmericano3.BackColor = System.Drawing.Color.Transparent;
+            this.rbAmericano3.Location = new System.Drawing.Point(85, 0);
+            this.rbAmericano3.Name = "rbAmericano3";
+            this.rbAmericano3.Size = new System.Drawing.Size(31, 17);
+            this.rbAmericano3.TabIndex = 38;
+            this.rbAmericano3.TabStop = true;
+            this.rbAmericano3.Text = "3";
+            this.rbAmericano3.UseVisualStyleBackColor = false;
+            // 
+            // rbMocha1
+            // 
+            this.rbMocha1.AutoSize = true;
+            this.rbMocha1.BackColor = System.Drawing.Color.Transparent;
+            this.rbMocha1.Location = new System.Drawing.Point(0, 0);
+            this.rbMocha1.Name = "rbMocha1";
+            this.rbMocha1.Size = new System.Drawing.Size(31, 17);
+            this.rbMocha1.TabIndex = 39;
+            this.rbMocha1.TabStop = true;
+            this.rbMocha1.Text = "1";
+            this.rbMocha1.UseVisualStyleBackColor = false;
+            // 
+            // rbCappuccino1
+            // 
+            this.rbCappuccino1.AutoSize = true;
+            this.rbCappuccino1.BackColor = System.Drawing.Color.Transparent;
+            this.rbCappuccino1.Location = new System.Drawing.Point(0, 3);
+            this.rbCappuccino1.Name = "rbCappuccino1";
+            this.rbCappuccino1.Size = new System.Drawing.Size(31, 17);
+            this.rbCappuccino1.TabIndex = 40;
+            this.rbCappuccino1.TabStop = true;
+            this.rbCappuccino1.Text = "1";
+            this.rbCappuccino1.UseVisualStyleBackColor = false;
+            // 
+            // rbAmericano1
+            // 
+            this.rbAmericano1.AutoSize = true;
+            this.rbAmericano1.BackColor = System.Drawing.Color.Transparent;
+            this.rbAmericano1.Location = new System.Drawing.Point(8, 0);
+            this.rbAmericano1.Name = "rbAmericano1";
+            this.rbAmericano1.Size = new System.Drawing.Size(31, 17);
+            this.rbAmericano1.TabIndex = 41;
+            this.rbAmericano1.TabStop = true;
+            this.rbAmericano1.Text = "1";
+            this.rbAmericano1.UseVisualStyleBackColor = false;
+            // 
+            // rbMocha2
+            // 
+            this.rbMocha2.AutoSize = true;
+            this.rbMocha2.BackColor = System.Drawing.Color.Transparent;
+            this.rbMocha2.Location = new System.Drawing.Point(37, 1);
+            this.rbMocha2.Name = "rbMocha2";
+            this.rbMocha2.Size = new System.Drawing.Size(31, 17);
+            this.rbMocha2.TabIndex = 42;
+            this.rbMocha2.TabStop = true;
+            this.rbMocha2.Text = "2";
+            this.rbMocha2.UseVisualStyleBackColor = false;
+            // 
+            // rbCappuccino2
+            // 
+            this.rbCappuccino2.AutoSize = true;
+            this.rbCappuccino2.BackColor = System.Drawing.Color.Transparent;
+            this.rbCappuccino2.Location = new System.Drawing.Point(40, 3);
+            this.rbCappuccino2.Name = "rbCappuccino2";
+            this.rbCappuccino2.Size = new System.Drawing.Size(31, 17);
+            this.rbCappuccino2.TabIndex = 43;
+            this.rbCappuccino2.TabStop = true;
+            this.rbCappuccino2.Text = "2";
+            this.rbCappuccino2.UseVisualStyleBackColor = false;
+            // 
+            // rbAmericano2
+            // 
+            this.rbAmericano2.AutoSize = true;
+            this.rbAmericano2.BackColor = System.Drawing.Color.Transparent;
+            this.rbAmericano2.Location = new System.Drawing.Point(45, 0);
+            this.rbAmericano2.Name = "rbAmericano2";
+            this.rbAmericano2.Size = new System.Drawing.Size(31, 17);
+            this.rbAmericano2.TabIndex = 44;
+            this.rbAmericano2.TabStop = true;
+            this.rbAmericano2.Text = "2";
+            this.rbAmericano2.UseVisualStyleBackColor = false;
+            // 
+            // panelSugarEspresso
+            // 
+            this.panelSugarEspresso.BackColor = System.Drawing.Color.Transparent;
+            this.panelSugarEspresso.Controls.Add(this.rbEspresso1);
+            this.panelSugarEspresso.Controls.Add(this.rbEspresso2);
+            this.panelSugarEspresso.Controls.Add(this.rbEspresso3);
+            this.panelSugarEspresso.Location = new System.Drawing.Point(72, 226);
+            this.panelSugarEspresso.Name = "panelSugarEspresso";
+            this.panelSugarEspresso.Size = new System.Drawing.Size(118, 28);
+            this.panelSugarEspresso.TabIndex = 45;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.Controls.Add(this.rbMacchiato1);
+            this.panel1.Controls.Add(this.rbMacchiato2);
+            this.panel1.Controls.Add(this.rbMacchiato3);
+            this.panel1.Location = new System.Drawing.Point(288, 225);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(138, 29);
+            this.panel1.TabIndex = 46;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Transparent;
+            this.panel2.Controls.Add(this.rbLatte1);
+            this.panel2.Controls.Add(this.rbLatte2);
+            this.panel2.Controls.Add(this.rbLatte3);
+            this.panel2.Location = new System.Drawing.Point(507, 226);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(138, 29);
+            this.panel2.TabIndex = 47;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.Transparent;
+            this.panel3.Controls.Add(this.rbAmericano1);
+            this.panel3.Controls.Add(this.rbAmericano2);
+            this.panel3.Controls.Add(this.rbAmericano3);
+            this.panel3.Location = new System.Drawing.Point(64, 444);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(138, 29);
+            this.panel3.TabIndex = 48;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.Transparent;
+            this.panel4.Controls.Add(this.rbCappuccino1);
+            this.panel4.Controls.Add(this.rbCappuccino2);
+            this.panel4.Controls.Add(this.rbCappuccino3);
+            this.panel4.Location = new System.Drawing.Point(288, 444);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(138, 29);
+            this.panel4.TabIndex = 49;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.Transparent;
+            this.panel5.Controls.Add(this.rbMocha1);
+            this.panel5.Controls.Add(this.rbMocha2);
+            this.panel5.Controls.Add(this.rbMocha3);
+            this.panel5.Location = new System.Drawing.Point(514, 444);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(138, 29);
+            this.panel5.TabIndex = 49;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImage = global::CoffeeMaker.Properties.Resources.beige_background;
             this.ClientSize = new System.Drawing.Size(670, 563);
+            this.Controls.Add(this.panel5);
+            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panelSugarEspresso);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnMakeCoffee);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.checkBox10);
-            this.Controls.Add(this.checkBox9);
-            this.Controls.Add(this.checkBox8);
-            this.Controls.Add(this.checkBox7);
-            this.Controls.Add(this.checkBox6);
-            this.Controls.Add(this.checkBox5);
-            this.Controls.Add(this.checkBox4);
-            this.Controls.Add(this.checkBox3);
-            this.Controls.Add(this.checkBox2);
-            this.Controls.Add(this.checkBox1);
-            this.Controls.Add(this.cbMilk);
-            this.Controls.Add(this.cbSugar);
+            this.Controls.Add(this.cbSugarMacchiato);
+            this.Controls.Add(this.cbSugarLatte);
+            this.Controls.Add(this.cbSugarAmericano);
+            this.Controls.Add(this.cbSugarCappuccino);
+            this.Controls.Add(this.cbSugarMocha);
+            this.Controls.Add(this.cbSugarEspresso);
             this.Controls.Add(this.rbLatte);
             this.Controls.Add(this.rbMocha);
             this.Controls.Add(this.rbMacchiato);
@@ -417,6 +662,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbCappuccino)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLatte)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbMocha)).EndInit();
+            this.panelSugarEspresso.ResumeLayout(false);
+            this.panelSugarEspresso.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -436,21 +693,39 @@
         private System.Windows.Forms.RadioButton rbMacchiato;
         private System.Windows.Forms.RadioButton rbMocha;
         private System.Windows.Forms.RadioButton rbLatte;
-        private System.Windows.Forms.CheckBox cbSugar;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox3;
-        private System.Windows.Forms.CheckBox checkBox4;
-        private System.Windows.Forms.CheckBox checkBox5;
-        private System.Windows.Forms.CheckBox checkBox6;
-        private System.Windows.Forms.CheckBox checkBox7;
-        private System.Windows.Forms.CheckBox checkBox8;
-        private System.Windows.Forms.CheckBox checkBox9;
-        private System.Windows.Forms.CheckBox checkBox10;
+        private System.Windows.Forms.CheckBox cbSugarEspresso;
+        private System.Windows.Forms.CheckBox cbSugarMocha;
+        private System.Windows.Forms.CheckBox cbSugarCappuccino;
+        private System.Windows.Forms.CheckBox cbSugarAmericano;
+        private System.Windows.Forms.CheckBox cbSugarLatte;
+        private System.Windows.Forms.CheckBox cbSugarMacchiato;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnMakeCoffee;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.CheckBox cbMilk;
+        private System.Windows.Forms.RadioButton rbEspresso1;
+        private System.Windows.Forms.RadioButton rbEspresso2;
+        private System.Windows.Forms.RadioButton rbEspresso3;
+        private System.Windows.Forms.RadioButton rbMacchiato1;
+        private System.Windows.Forms.RadioButton rbMacchiato2;
+        private System.Windows.Forms.RadioButton rbMacchiato3;
+        private System.Windows.Forms.RadioButton rbLatte1;
+        private System.Windows.Forms.RadioButton rbLatte2;
+        private System.Windows.Forms.RadioButton rbLatte3;
+        private System.Windows.Forms.RadioButton rbMocha3;
+        private System.Windows.Forms.RadioButton rbCappuccino3;
+        private System.Windows.Forms.RadioButton rbAmericano3;
+        private System.Windows.Forms.RadioButton rbMocha1;
+        private System.Windows.Forms.RadioButton rbCappuccino1;
+        private System.Windows.Forms.RadioButton rbAmericano1;
+        private System.Windows.Forms.RadioButton rbMocha2;
+        private System.Windows.Forms.RadioButton rbCappuccino2;
+        private System.Windows.Forms.RadioButton rbAmericano2;
+        private System.Windows.Forms.Panel panelSugarEspresso;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panel5;
     }
 }
 

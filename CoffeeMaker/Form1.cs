@@ -12,6 +12,7 @@ namespace CoffeeMaker
 {
     public partial class Form1 : Form
     {
+        private RadioButton _currentlySelectedCoffee = null;
         public Form1()
         {
             InitializeComponent();
@@ -31,6 +32,25 @@ namespace CoffeeMaker
             rbCappuccino.Tag = coffees[3];
             rbLatte.Tag = coffees[4];
             rbMocha.Tag = coffees[5];
+
+            // Coffee selection radio buttons
+            rbEspresso.CheckedChanged += CoffeeSelectionChanged;
+            rbAmericano.CheckedChanged += CoffeeSelectionChanged;
+            rbMacchiato.CheckedChanged += CoffeeSelectionChanged;
+            rbLatte.CheckedChanged += CoffeeSelectionChanged;
+            rbCappuccino.CheckedChanged += CoffeeSelectionChanged;
+            rbMocha.CheckedChanged += CoffeeSelectionChanged;
+
+            // Sugar checkboxes
+            cbSugarEspresso.CheckedChanged += cbSugarEspresso_CheckedChanged;
+            cbSugarAmericano.CheckedChanged += cbSugarAmericano_CheckedChanged;
+            cbSugarMacchiato.CheckedChanged += cbSugarMacchiato_CheckedChanged;
+            cbSugarLatte.CheckedChanged += cbSugarLatte_CheckedChanged;
+            cbSugarCappuccino.CheckedChanged += cbSugarCappuccino_CheckedChanged;
+            cbSugarMocha.CheckedChanged += cbSugarMocha_CheckedChanged;
+
+            //  Hide all sugar options at startup
+            HideAllSugarControls();
 
         }
 
@@ -88,12 +108,220 @@ namespace CoffeeMaker
 
         }
 
-        private void CoffeeSelectionChanged(object sender, EventArgs e)
+        private void HideAllSugarControls()
         {
-            
+            cbSugarEspresso.Visible = false;
+            cbSugarAmericano.Visible = false;
+            cbSugarMacchiato.Visible = false;
+            cbSugarLatte.Visible = false;
+            cbSugarCappuccino.Visible = false;
+            cbSugarMocha.Visible = false;
+
+            // Espresso sugar radios
+            rbEspresso1.Visible = false;
+            rbEspresso2.Visible = false;
+            rbEspresso3.Visible = false;
+
+            // Americano sugar radios
+            rbAmericano1.Visible = false;
+            rbAmericano2.Visible = false;
+            rbAmericano3.Visible = false;
+
+            // Macchiato sugar radios
+            rbMacchiato1.Visible = false;
+            rbMacchiato2.Visible = false;
+            rbMacchiato3.Visible = false;
+
+            // Cappuccino sugar radios
+            rbCappuccino1.Visible = false;
+            rbCappuccino2.Visible = false;
+            rbCappuccino3.Visible = false;
+
+            // Latte sugar radios
+            rbLatte1.Visible = false;
+            rbLatte2.Visible = false;
+            rbLatte3.Visible = false;
+
+            // Mocha sugar radios
+            rbMocha1.Visible = false;
+            rbMocha2.Visible = false;
+            rbMocha3.Visible = false;
+
         }
 
+        private void CoffeeSelectionChanged(object sender, EventArgs e)
+        {
+            var selectedRadio = sender as RadioButton;
+            if (selectedRadio == null || !selectedRadio.Checked)
+                return; // Only act when a coffee radio button is checked (not unchecked)
+
+            // Check if it's a new coffee selection, otherwise ignore
+            if (_currentlySelectedCoffee == selectedRadio)
+                return; // No change, ignore
+
+            _currentlySelectedCoffee = selectedRadio;
+
+            HideAllSugarControls();
+
+            if (rbEspresso.Checked)
+            {
+                cbSugarEspresso.Visible = true;
+                if (cbSugarEspresso.Checked)
+                {
+                    rbEspresso1.Visible = true;
+                    rbEspresso2.Visible = true;
+                    rbEspresso3.Visible = true;
+                }
+            }
+            else if (rbAmericano.Checked)
+            {
+                cbSugarAmericano.Visible = true;
+                if (cbSugarAmericano.Checked)
+                {
+                    rbAmericano1.Visible = true;
+                    rbAmericano2.Visible = true;
+                    rbAmericano3.Visible = true;
+                }
+            }
+            else if (rbMacchiato.Checked)
+            {
+                cbSugarMacchiato.Visible = true;
+                if (cbSugarMacchiato.Checked)
+                {
+                    rbMacchiato1.Visible = true;
+                    rbMacchiato2.Visible = true;
+                    rbMacchiato3.Visible = true;
+                }
+            }
+            else if (rbLatte.Checked)
+            {
+                cbSugarLatte.Visible = true;
+                if (cbSugarLatte.Checked)
+                {
+                    rbLatte1.Visible = true;
+                    rbLatte2.Visible = true;
+                    rbLatte3.Visible = true;
+                }
+            }
+            else if (rbCappuccino.Checked)
+            {
+                cbSugarCappuccino.Visible = true;
+                if (cbSugarCappuccino.Checked)
+                {
+                    rbCappuccino1.Visible = true;
+                    rbCappuccino2.Visible = true;
+                    rbCappuccino3.Visible = true;
+                }
+            }
+            else if (rbMocha.Checked)
+            {
+                cbSugarMocha.Visible = true;
+                if (cbSugarMocha.Checked)
+                {
+                    rbMocha1.Visible = true;
+                    rbMocha2.Visible = true;
+                    rbMocha3.Visible = true;
+                }
+            }
+        }
+
+
         private void rbEspresso_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbSugarEspresso_CheckedChanged(object sender, EventArgs e)
+        {
+            bool show = cbSugarEspresso.Checked;
+            rbEspresso1.Visible = true;
+            rbEspresso2.Visible = true;
+            rbEspresso3.Visible = true;
+
+            if (!show)
+            {
+                rbEspresso1.Visible = false;
+                rbEspresso2.Visible = false;
+                rbEspresso3.Visible = false;
+            }
+        }
+
+        private void cbSugarAmericano_CheckedChanged(object sender, EventArgs e)
+        {
+            bool show = cbSugarAmericano.Checked;
+            rbAmericano1.Visible = show;
+            rbAmericano2.Visible = show;
+            rbAmericano3.Visible = show;
+
+            if (!show)
+            {
+                rbAmericano1.Checked = false;
+                rbAmericano2.Checked = false;
+                rbAmericano3.Checked = false;
+            }
+        }
+
+        private void cbSugarMacchiato_CheckedChanged(object sender, EventArgs e)
+        {
+            bool show = cbSugarMacchiato.Checked;
+            rbMacchiato1.Visible = show;
+            rbMacchiato2.Visible = show;
+            rbMacchiato3.Visible = show;
+
+            if (!show)
+            {
+                rbMacchiato1.Checked = false;
+                rbMacchiato2.Checked = false;
+                rbMacchiato3.Checked = false;
+            }
+        }
+
+        private void cbSugarCappuccino_CheckedChanged(object sender, EventArgs e)
+        {
+            bool show = cbSugarCappuccino.Checked;
+            rbCappuccino1.Visible = show;
+            rbCappuccino2.Visible = show;
+            rbCappuccino3.Visible = show;
+
+            if (!show)
+            {
+                rbCappuccino1.Checked = false;
+                rbCappuccino2.Checked = false;
+                rbCappuccino3.Checked = false;
+            }
+        }
+
+        private void cbSugarLatte_CheckedChanged(object sender, EventArgs e)
+        {
+            bool show = cbSugarLatte.Checked;
+            rbLatte1.Visible = show;
+            rbLatte2.Visible = show;
+            rbLatte3.Visible = show;
+
+            if (!show)
+            {
+                rbLatte1.Checked = false;
+                rbLatte2.Checked = false;
+                rbLatte3.Checked = false;
+            }
+        }
+
+        private void cbSugarMocha_CheckedChanged(object sender, EventArgs e)
+        {
+            bool show = cbSugarMocha.Checked;
+            rbMocha1.Visible = show;
+            rbMocha2.Visible = show;
+            rbMocha3.Visible = show;
+
+            if (!show)
+            {
+                rbMocha1.Checked = false;
+                rbMocha2.Checked = false;
+                rbMocha3.Checked = false;
+            }
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
         {
 
         }
