@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,6 +13,9 @@ namespace CoffeeMaker
     public partial class Form1 : Form
     {
         private RadioButton _currentlySelectedCoffee = null;
+
+        int sugar = 0;
+        CoffeeOption selectedCoffee = null;
         public Form1()
         {
             InitializeComponent();
@@ -61,12 +64,13 @@ namespace CoffeeMaker
 
         private decimal GetTotalPrice()
         {
-            CoffeeOption selectedCoffee = null;
-            int sugarCount = 0;
 
             // Get selected coffee
             if (rbEspresso.Checked)
+            {
                 selectedCoffee = (CoffeeOption)rbEspresso.Tag;
+                selectedCoffee.CoffeeName = "Espresso";
+            }
             else if (rbAmericano.Checked)
                 selectedCoffee = (CoffeeOption)rbAmericano.Tag;
             else if (rbMacchiato.Checked)
@@ -81,52 +85,64 @@ namespace CoffeeMaker
             if (selectedCoffee == null)
                 return 0m;
 
+            setOption(selectedCoffee);
             // Count sugar checkboxes for selected coffee
 
             decimal totalPrice =selectedCoffee.CoffeePrice;
+            
 
             if (rbEspresso.Checked && cbSugarEspresso.Checked)
             {
-                if (rbEspresso1.Checked) totalPrice += 0.20m;
-                if (rbEspresso2.Checked) totalPrice += 2 * 0.20m;
-                if (rbEspresso3.Checked) totalPrice += 3 * 0.20m;
+                if (rbEspresso1.Checked) { totalPrice += 0.20m; sugar = 1; }
+                if (rbEspresso2.Checked) {totalPrice += 2 * 0.20m; sugar = 2; }
+                if (rbEspresso3.Checked) {totalPrice += 3 * 0.20m; sugar = 3; }
             }
             else if (rbAmericano.Checked && cbSugarAmericano.Checked)
             {
-                if (rbAmericano1.Checked) totalPrice += 0.20m;
-                if (rbAmericano2.Checked) totalPrice += 2 * 0.20m;
-                if (rbAmericano3.Checked) totalPrice += 3 * 0.20m;
+                if (rbAmericano1.Checked) { totalPrice += 0.20m; sugar = 1; }
+                if (rbAmericano2.Checked) { totalPrice += 2 * 0.20m; sugar = 2; }
+                if (rbAmericano3.Checked) { totalPrice += 3 * 0.20m; sugar = 3; }
             }
             else if (rbMacchiato.Checked && cbSugarMacchiato.Checked)
             {
-                if (rbMacchiato1.Checked) totalPrice += 0.20m;
-                if (rbMacchiato2.Checked) totalPrice += 2 * 0.20m;
-                if (rbMacchiato3.Checked) totalPrice += 3 * 0.20m;
+                if (rbMacchiato1.Checked) { totalPrice += 0.20m; sugar = 1; }
+                if (rbMacchiato2.Checked) { totalPrice += 2 * 0.20m; sugar = 2; }
+                if (rbMacchiato3.Checked) { totalPrice += 3 * 0.20m; sugar = 3; }
             }
             else if (rbCappuccino.Checked && cbSugarCappuccino.Checked)
             {
-                if (rbCappuccino1.Checked) totalPrice += 0.20m;
-                if (rbCappuccino2.Checked) totalPrice += 2 * 0.20m;
-                if (rbCappuccino3.Checked) totalPrice += 3 * 0.20m;
+                if (rbCappuccino1.Checked) { totalPrice += 0.20m; sugar = 1; }
+                if (rbCappuccino2.Checked) { totalPrice += 2 * 0.20m; sugar = 2; }
+                if (rbCappuccino3.Checked) { totalPrice += 3 * 0.20m; sugar = 3; }
             }
             else if (rbLatte.Checked && cbSugarLatte.Checked)
             {
-                if (rbLatte1.Checked) totalPrice += 0.20m;
-                if (rbLatte2.Checked) totalPrice += 2 * 0.20m;
-                if (rbLatte3.Checked) totalPrice += 3 * 0.20m;
+                if (rbLatte1.Checked) { totalPrice += 0.20m; sugar = 1; }
+                if (rbLatte2.Checked) { totalPrice += 2 * 0.20m; sugar = 2; }
+                if (rbLatte3.Checked) { totalPrice += 3 * 0.20m; sugar = 3; }
             }
             else if (rbMocha.Checked && cbSugarMocha.Checked)
             {
-                if (rbMocha1.Checked) totalPrice += 0.20m;
-                if (rbMocha2.Checked) totalPrice += 2 * 0.20m;
-                if (rbMocha3.Checked) totalPrice += 3 * 0.20m;
+                if (rbMocha1.Checked) { totalPrice += 0.20m; sugar = 1; }
+                if (rbMocha2.Checked) { totalPrice += 2 * 0.20m; sugar = 2; }
+                if (rbMocha3.Checked) { totalPrice += 3 * 0.20m; sugar = 3; }
             }
 
             decimal sugarPricePerUnit = 0.20m;
-
+            setSugar(sugar);
             return totalPrice;
         }
 
+        public void setSugar(int sugar)
+        {
+            this.sugar = sugar;
+        }
+
+        public void setOption(CoffeeOption option)
+        {
+            selectedCoffee = option;
+        }
+        
         private void btnMakeCoffee_Click(object sender, EventArgs e)
         {
             decimal totalPrice = GetTotalPrice();
@@ -155,8 +171,17 @@ namespace CoffeeMaker
 
                     MessageBox.Show($"Thank you! Change: ${change:F2}");
 
-                    var progress = new FormBillAndProgress(); //todo
+                    bool addSugar = false;
+                    if (sugar == 0) addSugar = false; else addSugar = true;
+                    var progress = new FormBillAndProgress(selectedCoffee.CoffeeName, addSugar, sugar); //todo
                     progress.Show();
+                    cbSugarAmericano.Checked = false;
+                    cbSugarEspresso.Checked = false;    
+                    cbSugarMacchiato.Checked = false;
+                    cbSugarLatte.Checked = false;
+                    cbSugarCappuccino.Checked = false;
+                    cbSugarMocha.Checked = false;
+
                 }
             }
         }
