@@ -67,10 +67,7 @@ namespace CoffeeMaker
 
             // Get selected coffee
             if (rbEspresso.Checked)
-            {
                 selectedCoffee = (CoffeeOption)rbEspresso.Tag;
-                selectedCoffee.CoffeeName = "Espresso";
-            }
             else if (rbAmericano.Checked)
                 selectedCoffee = (CoffeeOption)rbAmericano.Tag;
             else if (rbMacchiato.Checked)
