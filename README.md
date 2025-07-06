@@ -33,4 +33,17 @@ On the third and last picture, you are shown the progress of the coffee being po
 3.
 ![coffee3form](https://github.com/user-attachments/assets/5f654da4-332e-48bf-a711-2533288732c9)
 
+---
+
+Explanation of some of the classes and CoffeeOrder.cs and Animation.cs
+
+In the CoffeeOrder.cs class is the making of the final order by the customer, with the coffee selection and the amount of sugar, if it is added, regulated with the values of selectedCoffee of CoffeeOption type(which is the basic function for the name and price of a coffee item), bool type of added sugar and integer type of amount of sugar teaspoons if added. An object of this class is called in the progress form.
+
+The Animation.cs class is a class for the filling of the cup based on the order, and each order (type of coffee) add different ingredients in the cup based on the recipe of the coffee. The recipes and the colors of each ingredient are kept in 2 different dictionaries in the progress form. In this class, the fillSegment method is called for each ingredient of a coffee order. In that method, the filling is done with drawing an ellipse in the form of the empty cup image, customised with it's size and the form dimensions. Before drawing and filling the ellipse, a Snip of a Rectangle with the right dimensions and needed amount of the ingredient is made, so when the ellipse is drawn and filled, only the snipped part is shown on the form. The last segment on top that doesn't have a label is showing the added sugar, which is thicker with every teaspoon plus.
+
+CoffeeOrder.cs:
+![image](https://github.com/user-attachments/assets/fa42aaa2-d0e1-407b-96fb-3d538411673b)
+
+Animation.cs:
+![image](https://github.com/user-attachments/assets/2c8dae2c-5679-485c-80ab-3e0a0cef8262)
 
