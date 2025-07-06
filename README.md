@@ -8,6 +8,8 @@ Descritpion of the application
 
 The application represents a simple coffee shop with a simple design that let's a certain user order a coffee of his liking, and after that, the player recieves the bill and a simple design shows the user the progress of his coffee being made.
 
+---
+
 How the game is played
 
 The player chooses a coffee and is able to add sugar to the coffee if he wants to. After that, the player is shown the form in which he chooses the amount of money he wishes to pay with or he can back out and change the coffee and the amount of sugar he likes. If the player chooses the option to continue, he will be shown a form in which the proccess of making the coffee is visualised. After the proccess is done, the player will be met with the message "Thank you for ordering", indicating that the proccess is done, and if he wants to keep ordering another coffee he will have a button at the bottom that goes back to the initial form where he can repeat the proccess of ordering another coffee.
