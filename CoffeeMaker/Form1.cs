@@ -170,15 +170,18 @@ namespace CoffeeMaker
 
                     bool addSugar = false;
                     if (sugar == 0) addSugar = false; else addSugar = true;
-                    var progress = new FormBillAndProgress(selectedCoffee.CoffeeName, addSugar, sugar); //todo
+                    var progress = new FormBillAndProgress(selectedCoffee.CoffeeName, addSugar, sugar); // visualization
                     progress.Show();
+
+                    //reseting buttons and values when ordering again
                     cbSugarAmericano.Checked = false;
                     cbSugarEspresso.Checked = false;    
                     cbSugarMacchiato.Checked = false;
                     cbSugarLatte.Checked = false;
                     cbSugarCappuccino.Checked = false;
                     cbSugarMocha.Checked = false;
-
+                    sugar = 0;
+                    addSugar = false;
                 }
             }
         }
