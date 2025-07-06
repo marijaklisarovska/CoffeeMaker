@@ -22,3 +22,9 @@ On the following screenshot is a picture of the first form which you see when st
 
 1.
 ![coffee1form](https://github.com/user-attachments/assets/f45b4e4b-8447-4bba-b8b1-3ae6bf6b59cd)
+
+On the second screenshot is a picture which let's you add a certain amount of money you wish to pay for the coffee with. If you don't wish to continue with the payment, you may click the button "Back to Selection" which puts you on the first form where you can change your coffee option.
+
+2.
+![coffe2form](https://github.com/user-attachments/assets/0602d83a-b7f6-4b7a-8eeb-401abe972ac1)
+
