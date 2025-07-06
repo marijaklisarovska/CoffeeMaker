@@ -4,7 +4,7 @@ Windows Forms Project by: Tamara Deleva, Aleksandar Partaloski and Marija Klisar
 
 ---
 
-##Descritpion of the application
+Descritpion of the application
 The application represents a simple coffee shop with a simple design that let's a certain user order a coffee of his liking, and after that, the player recieves the bill and a simple design shows the user the progress of his coffee being made.
 
 How the game is played
