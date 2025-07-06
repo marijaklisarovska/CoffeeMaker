@@ -17,4 +17,7 @@ The player chooses a coffee and is able to add sugar to the coffee if he wants t
 ---
 
 Screenshots of the game
+
+On the following screenshot is a picture of the first form which you see when starting the application, which shows the coffees available, their prices and the amount of sugar that can be added to the coffee.
+
 ![coffee1form](https://github.com/user-attachments/assets/f45b4e4b-8447-4bba-b8b1-3ae6bf6b59cd)
