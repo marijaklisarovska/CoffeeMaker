@@ -6,7 +6,7 @@ Windows Forms Project by: Tamara Deleva, Aleksandar Partaloski and Marija Klisar
 
 Descritpion of the application
 
-The application represents a simple coffee shop with a simple design that let's a certain user order a coffee of his liking, and after that, the player recieves the bill and a simple design shows the user the progress of his coffee being made.
+The application represents a simple and easily usable coffee shop application with a simple design that let's a certain user order a coffee of his liking, and after that, the player recieves the bill and a simple design shows the user the progress of his coffee being made.
 
 ---
 
@@ -27,4 +27,10 @@ On the second screenshot is a picture which let's you add a certain amount of mo
 
 2.
 ![coffe2form](https://github.com/user-attachments/assets/0602d83a-b7f6-4b7a-8eeb-401abe972ac1)
+
+On the third and last picture, you are shown the progress of the coffee being poured in a cup with the amount of milk used, and the amount of sugar. After the process is done you may stop the application, or you can go back to ordering another coffee and repeat the same process yet again.
+
+3.
+![coffee3form](https://github.com/user-attachments/assets/5f654da4-332e-48bf-a711-2533288732c9)
+
 
